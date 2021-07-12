@@ -9,7 +9,7 @@ using TodoApi.Models;
 
 namespace TodoApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/TodoItems")]
     [ApiController]
     public class TodoItemsController : ControllerBase
     {
@@ -41,8 +41,7 @@ namespace TodoApi.Controllers
             return todoItem;
         }
 
-        // PUT: api/Todo/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        // PUT: api/TodoItems/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTodoItem(long id, TodoItem todoItem)
         {
